@@ -6,5 +6,8 @@
     <string name="title_goes_here">Title goes here</string>
     <string name="subtitle_goes_here">Subtitle goes here</string>
     <string name="expandable_arrow_indicator">Expandable arrow indicator</string>
+    <string name="body_1">Body 1</string>
+    <string name="body_2">Body 2</string>
+    <string name="lorem_ipsum_45_words">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et fermentum dolor. Aenean magna magna, pulvinar sit amet tincidunt quis, bibendum nec nisi. Nunc vitae finibus odio. Duis erat justo, pretium nec tincidunt id, facilisis in justo. Etiam feugiat, sapien quis mollis sollicitudin, urna nibh.</string>
 
 </resources>

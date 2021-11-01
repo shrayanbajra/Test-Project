@@ -43,7 +43,27 @@
                 android:layout_alignBottom="@id/tv_subtitle"
                 android:layout_alignParentEnd="true"
                 android:contentDescription="@string/expandable_arrow_indicator"
+                android:padding="8dp"
                 android:src="@drawable/ic_keyboard_arrow_up" />
+
+            <LinearLayout
+                android:id="@+id/ll_expandable_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_subtitle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_body_1"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lorem_ipsum_45_words" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
