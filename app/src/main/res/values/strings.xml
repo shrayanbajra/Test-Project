@@ -1,3 +1,10 @@
 <resources>
+
     <string name="app_name">Test Project</string>
+
+    <string name="search">Search</string>
+    <string name="title_goes_here">Title goes here</string>
+    <string name="subtitle_goes_here">Subtitle goes here</string>
+    <string name="expandable_arrow_indicator">Expandable arrow indicator</string>
+
 </resources>
