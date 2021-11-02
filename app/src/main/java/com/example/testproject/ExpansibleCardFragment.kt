@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.cardview.widget.CardView
+import android.widget.RelativeLayout
 
-class ExpandableCardFragment : Fragment() {
+class ExpansibleCardFragment : Fragment() {
 
     companion object {
 
         @JvmStatic
-        fun newInstance() = ExpandableCardFragment()
+        fun newInstance() = ExpansibleCardFragment()
 
     }
 
@@ -23,27 +23,27 @@ class ExpandableCardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_expandable_card, container, false)
+        return inflater.inflate(R.layout.fragment_expansible_card, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cvExpandableCard: CardView = view.findViewById(R.id.cv_expandable_card)
-        val llExpansibleView: LinearLayout = view.findViewById(R.id.ll_expandable_view)
+        val rlMainView: RelativeLayout = view.findViewById(R.id.rl_main_view)
+        val llDetailView: LinearLayout = view.findViewById(R.id.ll_detail_view)
         val ivArrow: ImageView = view.findViewById(R.id.iv_arrow)
 
-        cvExpandableCard.setOnClickListener {
+        rlMainView.setOnClickListener {
 
-            val isCardExpanded = llExpansibleView.visibility == View.VISIBLE
+            val isCardExpanded = llDetailView.visibility == View.VISIBLE
             if (isCardExpanded) {
 
-                AnimationUtils.collapse(view = llExpansibleView)
+                AnimationUtils.collapse(view = llDetailView)
                 AnimationUtils.toggleArrow(view = ivArrow, isExpanded = true)
 
             } else {
 
-                AnimationUtils.expand(view = llExpansibleView)
+                AnimationUtils.expand(view = llDetailView)
                 AnimationUtils.toggleArrow(view = ivArrow, isExpanded = false)
 
             }

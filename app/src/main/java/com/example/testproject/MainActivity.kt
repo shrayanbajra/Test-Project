@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment = ExpandableCardFragment.newInstance()
+        val fragment = ExpansibleCardFragment.newInstance()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, fragment, fragment.tag)
             .commit()

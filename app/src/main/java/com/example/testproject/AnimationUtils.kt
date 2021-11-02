@@ -8,13 +8,17 @@ import android.view.animation.Transformation
 object AnimationUtils {
 
     fun toggleArrow(view: View, isExpanded: Boolean): Boolean {
+
+        val duration = 200L
+
         return if (isExpanded) {
-            view.animate().setDuration(200).rotation(180F)
+            view.animate().setDuration(duration).rotation(180F)
             true
         } else {
-            view.animate().setDuration(200).rotation(0F)
+            view.animate().setDuration(duration).rotation(0F)
             false
         }
+
     }
 
     fun expand(view: View) {
@@ -31,9 +35,15 @@ object AnimationUtils {
 
         val animation: Animation = object : Animation() {
             override fun applyTransformation(interpolatedTime: Float, t: Transformation?) {
+
                 view.layoutParams.height =
-                    if (interpolatedTime == 1f) ViewGroup.LayoutParams.WRAP_CONTENT else (actualHeight * interpolatedTime).toInt()
+                    if (interpolatedTime == 1f)
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    else
+                        (actualHeight * interpolatedTime).toInt()
+
                 view.requestLayout()
+
             }
         }
 
@@ -52,23 +62,31 @@ object AnimationUtils {
     }
 
     private fun getCollapseAnimation(view: View): Animation {
+
         val actualHeight: Int = view.measuredHeight
 
         val animation: Animation = object : Animation() {
             override fun applyTransformation(interpolatedTime: Float, t: Transformation) {
+
                 if (interpolatedTime == 1f) {
+
                     view.visibility = View.GONE
+
                 } else {
+
                     view.layoutParams.height =
                         actualHeight - (actualHeight * interpolatedTime).toInt()
                     view.requestLayout()
+
                 }
+
             }
         }
 
-        animation.duration = (actualHeight / view.context.resources
-            .displayMetrics.density).toLong()
+        animation.duration = (actualHeight / view.context.resources.displayMetrics.density).toLong()
+
         return animation
+
     }
 
 }
