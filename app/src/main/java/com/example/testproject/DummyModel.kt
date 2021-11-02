@@ -1,3 +1,8 @@
 package com.example.testproject
 
-data class DummyModel(val title: String, val subtitle: String, val description: String)
+data class DummyModel(
+    var isExpanded: Boolean = false,
+    val title: String,
+    val subtitle: String,
+    val description: String
+)

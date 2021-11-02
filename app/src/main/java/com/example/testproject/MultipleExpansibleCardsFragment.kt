@@ -25,8 +25,18 @@ class MultipleExpansibleCardsFragment : Fragment() {
     }
 
     private val mAdapter: MultipleExpansibleCardsAdapter by lazy {
-        MultipleExpansibleCardsAdapter()
+        MultipleExpansibleCardsAdapter(clickListener = mCardClickListener)
     }
+
+    private val mCardClickListener
+        get() = object : MultipleExpansibleCardsAdapter.CardClickListener {
+
+            override fun onCardClicked(model: DummyModel, position: Int) {
+                model.isExpanded = !model.isExpanded
+                mAdapter.updateItemAt(model = model, position = position)
+            }
+
+        }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
