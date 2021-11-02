@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.testproject.databinding.FragmentExpandableCardBinding
+import android.widget.LinearLayout
+import androidx.cardview.widget.CardView
 
 class ExpandableCardFragment : Fragment() {
-
-    private var _binding: FragmentExpandableCardBinding? = null
-    private val mBinding get() = _binding!!
 
     companion object {
 
@@ -24,13 +22,30 @@ class ExpandableCardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentExpandableCardBinding.inflate(inflater, container, false)
-        return mBinding.root
+        return inflater.inflate(R.layout.fragment_expandable_card, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val cvExpandableCard: CardView = view.findViewById(R.id.cv_expandable_card)
+        val llExpansibleView: LinearLayout = view.findViewById(R.id.ll_expandable_view)
+
+        cvExpandableCard.setOnClickListener {
+
+            val isCardExpanded = llExpansibleView.visibility == View.VISIBLE
+            if (isCardExpanded) {
+
+                llExpansibleView.visibility = View.GONE
+
+            } else {
+
+                llExpansibleView.visibility = View.VISIBLE
+
+            }
+
+        }
+
     }
 
 }
