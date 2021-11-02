@@ -10,7 +10,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_expandable_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_expansible_card.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_multiple_expansible_cards.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/layout/fragment_recycler_view_with_expandable_cards.xml" value="0.10233029381965553" />
+        <entry key="app/src/main/res/layout/fragment_single_expansible_card.xml" value="0.10233029381965553" />
+        <entry key="app/src/main/res/layout/item_expansible_card.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_main.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.20717948717948717" />
         <entry key="app/src/main/res/menu/menu_my_tasks.xml" value="0.20717948717948717" />
