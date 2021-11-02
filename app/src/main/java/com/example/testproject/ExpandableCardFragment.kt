@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.cardview.widget.CardView
 
@@ -30,17 +31,20 @@ class ExpandableCardFragment : Fragment() {
 
         val cvExpandableCard: CardView = view.findViewById(R.id.cv_expandable_card)
         val llExpansibleView: LinearLayout = view.findViewById(R.id.ll_expandable_view)
+        val ivArrow: ImageView = view.findViewById(R.id.iv_arrow)
 
         cvExpandableCard.setOnClickListener {
 
             val isCardExpanded = llExpansibleView.visibility == View.VISIBLE
             if (isCardExpanded) {
 
-                llExpansibleView.visibility = View.GONE
+                AnimationUtils.collapse(view = llExpansibleView)
+                AnimationUtils.toggleArrow(view = ivArrow, isExpanded = true)
 
             } else {
 
-                llExpansibleView.visibility = View.VISIBLE
+                AnimationUtils.expand(view = llExpansibleView)
+                AnimationUtils.toggleArrow(view = ivArrow, isExpanded = false)
 
             }
 
