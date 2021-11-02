@@ -12,12 +12,12 @@ import androidx.fragment.app.Fragment
 import androidx.transition.AutoTransition
 import androidx.transition.TransitionManager
 
-class ExpansibleCardFragment : Fragment() {
+class SingleExpansibleCardFragment : Fragment() {
 
     companion object {
 
         @JvmStatic
-        fun newInstance() = ExpansibleCardFragment()
+        fun newInstance() = SingleExpansibleCardFragment()
 
     }
 
@@ -26,7 +26,7 @@ class ExpansibleCardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_expansible_card, container, false)
+        return inflater.inflate(R.layout.fragment_single_expansible_card, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -9,5 +9,9 @@
     <string name="body_1">Body 1</string>
     <string name="body_2">Body 2</string>
     <string name="lorem_ipsum_45_words">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et fermentum dolor. Aenean magna magna, pulvinar sit amet tincidunt quis, bibendum nec nisi. Nunc vitae finibus odio. Duis erat justo, pretium nec tincidunt id, facilisis in justo. Etiam feugiat, sapien quis mollis sollicitudin, urna nibh.</string>
+    <string name="single_expansible_card">Single Expansible Card</string>
+    <string name="multiple_expansible_cards">Multiple Expansible Cards</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
