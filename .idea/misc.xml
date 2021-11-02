@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_keyboard_arrow_up.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10144927536231885" />
         <entry key="app/src/main/res/layout/fragment_expandable_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_recycler_view_with_expandable_cards.xml" value="0.10233029381965553" />

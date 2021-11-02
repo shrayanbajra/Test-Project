@@ -48,7 +48,7 @@
                     android:layout_alignTop="@id/tv_title"
                     android:layout_alignBottom="@id/tv_subtitle"
                     android:layout_alignParentEnd="true"
-                    android:contentDescription="@string/expandable_arrow_indicator"
+                    android:contentDescription="@string/expansible_arrow_indicator"
                     android:padding="8dp"
                     android:src="@drawable/ic_keyboard_arrow_up" />
 

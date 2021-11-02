@@ -50,8 +50,6 @@ object AnimationUtils {
         animation.duration =
             (actualHeight / view.context.resources.displayMetrics.density).toLong()
 
-        view.startAnimation(animation)
-
         return animation
 
     }
