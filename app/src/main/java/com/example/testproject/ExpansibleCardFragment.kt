@@ -43,14 +43,14 @@ class ExpansibleCardFragment : Fragment() {
             if (isCardExpanded) {
 
                 TransitionManager.beginDelayedTransition(cvExpansibleCardView, AutoTransition())
+                AnimationUtils.toggleArrow(imageView = ivArrow, isExpanded = true)
                 llDetailView.visibility = View.GONE
-                AnimationUtils.toggleArrow(view = ivArrow, isExpanded = true)
 
             } else {
 
                 TransitionManager.beginDelayedTransition(cvExpansibleCardView, AutoTransition())
+                AnimationUtils.toggleArrow(imageView = ivArrow, isExpanded = false)
                 llDetailView.visibility = View.VISIBLE
-                AnimationUtils.toggleArrow(view = ivArrow, isExpanded = false)
 
             }
 
