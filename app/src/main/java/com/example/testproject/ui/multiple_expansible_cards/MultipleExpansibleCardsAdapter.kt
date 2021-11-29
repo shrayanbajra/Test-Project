@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.testproject.ui.multiple_expansible_cards
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +9,8 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testproject.data.DummyModel
+import com.example.testproject.R
 
 class MultipleExpansibleCardsAdapter(
 

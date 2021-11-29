@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.testproject.ui.multiple_expansible_cards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testproject.data.DummyModel
+import com.example.testproject.R
 
 class MultipleExpansibleCardsFragment : Fragment() {
 

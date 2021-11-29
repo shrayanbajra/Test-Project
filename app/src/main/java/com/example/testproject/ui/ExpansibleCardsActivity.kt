@@ -1,9 +1,12 @@
-package com.example.testproject
+package com.example.testproject.ui
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.testproject.R
+import com.example.testproject.ui.multiple_expansible_cards.MultipleExpansibleCardsFragment
+import com.example.testproject.ui.single_expansible_card.SingleExpansibleCardFragment
 
 class ExpansibleCardsActivity : AppCompatActivity() {
 

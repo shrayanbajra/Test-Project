@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.testproject.ui.single_expansible_card
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,8 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.transition.AutoTransition
 import androidx.transition.TransitionManager
+import com.example.testproject.utils.AnimationUtils
+import com.example.testproject.R
 
 class SingleExpansibleCardFragment : Fragment() {
 

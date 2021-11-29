@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.testproject.data
 
 data class DummyModel(
     var isExpanded: Boolean = false,

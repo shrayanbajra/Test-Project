@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.testproject.utils
 
 import android.view.View
 import android.view.ViewGroup
