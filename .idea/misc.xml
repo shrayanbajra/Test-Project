@@ -7,14 +7,16 @@
         <entry key="app/src/main/res/drawable/ic_arrow_down.xml" value="0.2230769230769231" />
         <entry key="app/src/main/res/drawable/ic_keyboard_arrow_up.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/activity_expansible_cards.xml" value="0.10233029381965553" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_request_permission.xml" value="0.12664640324214793" />
         <entry key="app/src/main/res/layout/fragment_expandable_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_expansible_card.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_multiple_expansible_cards.xml" value="0.10233029381965553" />
+        <entry key="app/src/main/res/layout/fragment_pagination.xml" value="0.12664640324214793" />
         <entry key="app/src/main/res/layout/fragment_recycler_view_with_expandable_cards.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/layout/fragment_single_expansible_card.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/layout/item_expansible_card.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_pagination.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_main.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.20717948717948717" />
         <entry key="app/src/main/res/menu/menu_my_tasks.xml" value="0.20717948717948717" />

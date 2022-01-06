@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.testproject.databinding.ActivityMainBinding
+import com.example.testproject.ui.pagination.PaginationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
                 packageContext = this,
                 category = ExpansibleCardsActivity.MULTIPLE
             )
+            startActivity(intent)
+        }
+
+        mBinding.btnPagination.setOnClickListener {
+            val intent = PaginationActivity.newIntent(packageContext = this)
             startActivity(intent)
         }
 

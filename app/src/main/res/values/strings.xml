@@ -16,5 +16,6 @@
     <string name="permission_x">Permission X</string>
     <string name="request_permission">Request Permission</string>
     <string name="keep_requesting_permissions">Keep requesting permissions</string>
+    <string name="pagination">Pagination</string>
 
 </resources>
