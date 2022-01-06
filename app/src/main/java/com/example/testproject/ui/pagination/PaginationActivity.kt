@@ -3,17 +3,18 @@ package com.example.testproject.ui.pagination
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.FragmentPaginationBinding
+import com.example.testproject.showShortToast
 
 class PaginationActivity : AppCompatActivity() {
 
     private var binding: FragmentPaginationBinding? = null
     private val mBinding get() = binding!!
-
-    private val paginationAdapter by lazy { PaginationAdapter() }
 
     companion object {
 
@@ -25,6 +26,10 @@ class PaginationActivity : AppCompatActivity() {
 
     }
 
+    private val mPaginationAdapter by lazy { PaginationAdapter() }
+
+    private val mViewModel by lazy { ViewModelProvider(this)[PaginationViewModel::class.java] }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FragmentPaginationBinding.inflate(layoutInflater)
@@ -34,11 +39,28 @@ class PaginationActivity : AppCompatActivity() {
         mBinding.rvItems.apply {
             layoutManager = LinearLayoutManager(context)
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-            adapter = paginationAdapter
+            adapter = mPaginationAdapter
         }
 
         val items = listOf("String 1", "String 2", "String 3")
-        paginationAdapter.setData(items = items)
+        mPaginationAdapter.setData(items = items)
+
+        mViewModel.getList().observe(this) { response ->
+
+            if (response == null) {
+
+                val errorMessage = response ?: "Error"
+                showShortToast(errorMessage)
+
+            } else {
+
+                showShortToast("Success")
+                Log.d("PaginationActivity", response)
+
+            }
+
+        }
+
     }
 
 }
