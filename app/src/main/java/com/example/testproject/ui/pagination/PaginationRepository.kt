@@ -1,12 +1,19 @@
 package com.example.testproject.ui.pagination
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import com.example.testproject.network.NetworkResult
 import com.example.testproject.network.PicSumApiService
+import com.example.testproject.ui.pagination.dto.PicSumDto
+import com.example.testproject.utils.NetworkUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class PaginationRepository private constructor(private val picSumApiService: PicSumApiService) {
 
     companion object {
+
+        private const val TAG = "PaginationRepository"
 
         private var instance: PaginationRepository? = null
 
@@ -21,21 +28,61 @@ class PaginationRepository private constructor(private val picSumApiService: Pic
 
     }
 
-    suspend fun getList(): String? {
+    suspend fun getList(): MutableLiveData<NetworkResult<List<PicSumDto>>> {
 
-        return withContext(Dispatchers.IO) {
+        val result = MutableLiveData<NetworkResult<List<PicSumDto>>>()
 
-            val response = picSumApiService.getList(page = 1, limit = 20)
-            val wasNotSuccessful = response.isSuccessful
-            if (wasNotSuccessful) {
+        withContext(Dispatchers.IO) {
 
-                return@withContext response.message()
+            val hasNoInternetConnection = NetworkUtils.hasNoInternetConnection()
+
+            if (hasNoInternetConnection) {
+
+                Log.d(TAG, "getList: No Internet Connection")
+                result.postValue(NetworkResult.Error("No Internet connection!"))
+                return@withContext
 
             }
 
-            return@withContext response.body()
+            Log.d(TAG, "getList: Loading")
+            result.postValue(NetworkResult.Loading())
+
+            try {
+
+                Log.d(TAG, "getList: Making network request")
+                val networkResponse = picSumApiService.getList(page = 1, limit = 20)
+                if (networkResponse.isSuccessful) {
+
+                    val responseBody = networkResponse.body()
+                    if (responseBody == null) {
+
+                        Log.d(TAG, "getList: Error -> ${networkResponse.message()}")
+                        result.postValue(NetworkResult.Error(networkResponse.message()))
+
+                    } else {
+
+                        Log.d(TAG, "getList: Success -> $responseBody")
+                        result.postValue(NetworkResult.Success(responseBody))
+
+                    }
+
+                } else {
+
+                    Log.d(TAG, "getList: Error -> ${networkResponse.message()}")
+                    result.postValue(NetworkResult.Error(networkResponse.message()))
+
+                }
+
+            } catch (e: Exception) {
+
+                Log.d(TAG, "getList: Error -> ${e.message}")
+                result.postValue(NetworkResult.Error(e.message))
+
+            }
 
         }
+
+        return result
 
     }
 

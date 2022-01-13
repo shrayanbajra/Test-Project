@@ -3,7 +3,9 @@ package com.example.testproject.ui.pagination
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.testproject.network.NetworkResult
 import com.example.testproject.network.PicSumClient
+import com.example.testproject.ui.pagination.dto.PicSumDto
 import kotlinx.coroutines.launch
 
 class PaginationViewModel : ViewModel() {
@@ -13,13 +15,13 @@ class PaginationViewModel : ViewModel() {
         PaginationRepository.getInstance(picSumApiService = picSumApiService)
     }
 
-    fun getList(): MutableLiveData<String?> {
+    fun getList(): MutableLiveData<NetworkResult<List<PicSumDto>>> {
 
-        val items = MutableLiveData<String?>()
+        var items = MutableLiveData<NetworkResult<List<PicSumDto>>>()
 
         viewModelScope.launch {
 
-            items.value = repository.getList()
+            items = repository.getList()
 
         }
 

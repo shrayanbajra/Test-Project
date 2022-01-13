@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.FragmentPaginationBinding
+import com.example.testproject.network.NetworkResult
 import com.example.testproject.showShortToast
 
 class PaginationActivity : AppCompatActivity() {
@@ -17,6 +18,8 @@ class PaginationActivity : AppCompatActivity() {
     private val mBinding get() = binding!!
 
     companion object {
+
+        private const val TAG = "PaginationActivity"
 
         fun newIntent(packageContext: Context): Intent {
 
@@ -45,17 +48,31 @@ class PaginationActivity : AppCompatActivity() {
         val items = listOf("String 1", "String 2", "String 3")
         mPaginationAdapter.setData(items = items)
 
-        mViewModel.getList().observe(this) { response ->
+        mViewModel.getList().observe(this) { networkResult ->
 
-            if (response == null) {
+            when (networkResult) {
 
-                val errorMessage = response ?: "Error"
-                showShortToast(errorMessage)
+                is NetworkResult.Loading -> {
 
-            } else {
+                    showShortToast(message = "Loading")
+                    Log.d(TAG, "onCreate: Loading")
 
-                showShortToast("Success")
-                Log.d("PaginationActivity", response)
+                }
+
+                is NetworkResult.Error -> {
+
+                    val errorMessage = networkResult.message ?: "Something went wrong"
+                    showShortToast(message = errorMessage)
+                    Log.d(TAG, "onCreate: $errorMessage")
+
+                }
+
+                is NetworkResult.Success -> {
+
+                    showShortToast("Success")
+                    Log.d("PaginationActivity", "onCreate: ${networkResult.data}")
+
+                }
 
             }
 
