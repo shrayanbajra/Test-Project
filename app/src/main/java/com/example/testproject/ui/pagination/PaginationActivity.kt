@@ -32,7 +32,14 @@ class PaginationActivity : AppCompatActivity() {
     }
 
     private val mPaginationAdapter by lazy { PaginationAdapter() }
-    private val mPagedAdapter by lazy { ItemsPagedAdapter() }
+    private val mPagedAdapter by lazy {
+        ItemsPagedAdapter().apply {
+            withLoadStateHeaderAndFooter(
+                header = ItemLoadingStateAdapter(this),
+                footer = ItemLoadingStateAdapter(this)
+            )
+        }
+    }
 
     private val mViewModel by lazy { ViewModelProvider(this)[PaginationViewModel::class.java] }
 

@@ -17,5 +17,6 @@
     <string name="request_permission">Request Permission</string>
     <string name="keep_requesting_permissions">Keep requesting permissions</string>
     <string name="pagination">Pagination</string>
+    <string name="retry">Retry</string>
 
 </resources>

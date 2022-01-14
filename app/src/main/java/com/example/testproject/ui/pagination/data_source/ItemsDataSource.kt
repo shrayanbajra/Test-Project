@@ -1,4 +1,4 @@
-package com.example.testproject.ui.pagination.pagination_components
+package com.example.testproject.ui.pagination.data_source
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

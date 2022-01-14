@@ -9,8 +9,8 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.example.testproject.network.NetworkResult
 import com.example.testproject.network.PicSumClient
+import com.example.testproject.ui.pagination.data_source.ItemsDataSource
 import com.example.testproject.ui.pagination.dto.PicSumDto
-import com.example.testproject.ui.pagination.pagination_components.ItemsDataSource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
