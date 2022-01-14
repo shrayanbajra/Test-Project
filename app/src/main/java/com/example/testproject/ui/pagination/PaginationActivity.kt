@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.FragmentPaginationBinding
 import com.example.testproject.network.NetworkResult
 import com.example.testproject.showShortToast
+import kotlinx.coroutines.flow.collectLatest
 
 class PaginationActivity : AppCompatActivity() {
 
@@ -30,6 +32,7 @@ class PaginationActivity : AppCompatActivity() {
     }
 
     private val mPaginationAdapter by lazy { PaginationAdapter() }
+    private val mPagedAdapter by lazy { ItemsPagedAdapter() }
 
     private val mViewModel by lazy { ViewModelProvider(this)[PaginationViewModel::class.java] }
 
@@ -42,11 +45,17 @@ class PaginationActivity : AppCompatActivity() {
         mBinding.rvItems.apply {
             layoutManager = LinearLayoutManager(context)
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-            adapter = mPaginationAdapter
+            adapter = mPagedAdapter
         }
 
         val items = listOf("String 1", "String 2", "String 3")
         mPaginationAdapter.setData(items = items)
+
+        lifecycleScope.launchWhenCreated {
+            mViewModel.items.collectLatest { pagingData ->
+                mPagedAdapter.submitData(pagingData)
+            }
+        }
 
         mViewModel.getList().observe(this) { networkResult ->
 
