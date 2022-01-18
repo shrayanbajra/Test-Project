@@ -15,3 +15,6 @@ fun AppCompatActivity.showShortToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
 }
+
+val <T> T.exhaustive: T
+    get() = this

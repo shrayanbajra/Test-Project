@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.ActivityMainBinding
+import com.example.testproject.exhaustive
 import com.example.testproject.ui.pagination.PaginationActivity
 import com.example.testproject.utils.SingleParamItemClickListener
 
@@ -27,9 +28,11 @@ class MainActivity : AppCompatActivity() {
 
                     Feature.MULTIPLE_EXPANSIBLE_CARD -> openMultipleExpansibleCardsActivity()
 
-                    Feature.PAGINATION -> openPaginationAcitivity()
+                    Feature.PAGINATION -> openPaginationActivity()
 
-                }
+                    Feature.IMAGE_CHOOSER -> openImageChooserActivity()
+
+                }.exhaustive
 
             }
 
@@ -65,8 +68,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun openPaginationAcitivity() {
+    private fun openPaginationActivity() {
         val intent = PaginationActivity.newIntent(packageContext = this)
+        startActivity(intent)
+    }
+
+    private fun openImageChooserActivity() {
+        val intent = ImageChooserActivity.newIntent(packageContext = this)
         startActivity(intent)
     }
 
