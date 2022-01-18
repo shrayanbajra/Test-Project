@@ -3,13 +3,37 @@ package com.example.testproject.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.ActivityMainBinding
 import com.example.testproject.ui.pagination.PaginationActivity
+import com.example.testproject.utils.SingleParamItemClickListener
 
 class MainActivity : AppCompatActivity() {
 
     private var binding: ActivityMainBinding? = null
     private val mBinding get() = binding!!
+
+    private val mAdapter by lazy { FeaturesAdapter(clickListener = clickListener) }
+
+    private val clickListener
+        get() = object : SingleParamItemClickListener<Feature> {
+
+            override fun onItemClick(item: Feature) {
+
+                when (item) {
+
+                    Feature.SINGLE_EXPANSIBLE_CARD -> openSingleExpansibleCardActivity()
+
+                    Feature.MULTIPLE_EXPANSIBLE_CARD -> openMultipleExpansibleCardsActivity()
+
+                    Feature.PAGINATION -> openPaginationAcitivity()
+
+                }
+
+            }
+
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,32 +43,44 @@ class MainActivity : AppCompatActivity() {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-        mBinding.btnSingleExpansibleCard.setOnClickListener {
-            val intent = ExpansibleCardsActivity.newIntent(
-                packageContext = this,
-                category = ExpansibleCardsActivity.SINGLE
-            )
-            startActivity(intent)
-        }
+        initRvFeatures()
+        val features = Feature.values()
+        mAdapter.setFeatures(features)
 
-        mBinding.btnMultipleExpansibleCards.setOnClickListener {
-            val intent = ExpansibleCardsActivity.newIntent(
-                packageContext = this,
-                category = ExpansibleCardsActivity.MULTIPLE
-            )
-            startActivity(intent)
-        }
+    }
 
-        mBinding.btnPagination.setOnClickListener {
-            val intent = PaginationActivity.newIntent(packageContext = this)
-            startActivity(intent)
-        }
+    private fun openSingleExpansibleCardActivity() {
+        val intent = ExpansibleCardsActivity.newIntent(
+            packageContext = this,
+            category = ExpansibleCardsActivity.SINGLE
+        )
+        startActivity(intent)
+    }
 
-        mBinding.btnPermissionX.setOnClickListener {
-            val intent = RequestPermissionActivity.newIntent(packageContext = this)
-            startActivity(intent)
-        }
+    private fun openMultipleExpansibleCardsActivity() {
+        val intent = ExpansibleCardsActivity.newIntent(
+            packageContext = this,
+            category = ExpansibleCardsActivity.MULTIPLE
+        )
+        startActivity(intent)
+    }
 
+    private fun openPaginationAcitivity() {
+        val intent = PaginationActivity.newIntent(packageContext = this)
+        startActivity(intent)
+    }
+
+    private fun openPermissionXActivity() {
+        val intent = RequestPermissionActivity.newIntent(packageContext = this)
+        startActivity(intent)
+    }
+
+    private fun initRvFeatures() {
+        mBinding.rvFeatures.apply {
+            layoutManager = LinearLayoutManager(context)
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+            adapter = mAdapter
+        }
     }
 
 }
