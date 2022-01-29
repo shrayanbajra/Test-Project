@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.ActivityMainBinding
 import com.example.testproject.exhaustive
 import com.example.testproject.ui.pagination.PaginationActivity
+import com.example.testproject.ui.sandwich.SandwichActivity
 import com.example.testproject.utils.SingleParamItemClickListener
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
                     Feature.PAGINATION -> openPaginationActivity()
 
                     Feature.IMAGE_CHOOSER -> openImageChooserActivity()
+
+                    Feature.SANDWICH -> openSandwichActivity()
 
                 }.exhaustive
 
@@ -75,6 +78,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openImageChooserActivity() {
         val intent = ImageChooserActivity.newIntent(packageContext = this)
+        startActivity(intent)
+    }
+
+    private fun openSandwichActivity() {
+        val intent = SandwichActivity.newIntent(packageContext = this)
         startActivity(intent)
     }
 
