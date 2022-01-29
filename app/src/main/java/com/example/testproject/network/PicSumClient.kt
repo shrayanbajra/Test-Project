@@ -1,6 +1,7 @@
 package com.example.testproject.network
 
 import android.util.Log
+import com.skydoves.sandwich.coroutines.CoroutinesResponseCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,6 +19,7 @@ object PicSumClient {
             .baseUrl("https://picsum.photos/")
             .addConverterFactory(GsonConverterFactory.create())
             .addConverterFactory(ScalarsConverterFactory.create())
+            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
             .client(okHttpClient)
             .build()
 
