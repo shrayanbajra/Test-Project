@@ -28,11 +28,11 @@ class EqualSpacingResponsiveDesignActivity : AppCompatActivity() {
         setContentView(view)
 
         mBinding.apply {
-            tvText1.text = "Brancher"
-            tvText2.text = "Piece"
-            tvText3.text = "Scanner"
-            tvText4.text = "Wi-Fi"
-            tvText5.text = "Synchronizer"
+            tvText1.text = "Brancher 123"
+            tvText2.text = "Piece 123"
+            tvText3.text = "Scanner 123"
+            tvText4.text = "Wi-Fi 123"
+            tvText5.text = "Synchronizer 123"
         }
 
     }

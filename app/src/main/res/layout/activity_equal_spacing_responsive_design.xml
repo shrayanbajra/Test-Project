@@ -20,10 +20,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number_1"
+        app:layout_constraintEnd_toStartOf="@id/tv_number_2"
+        app:layout_constraintTop_toTopOf="@id/tv_number_1"
+        app:layout_constraintBottom_toBottomOf="@id/tv_number_1" />
+
     <TextView
         android:id="@+id/tv_text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@id/tv_text_2"
+        android:layout_marginEnd="4dp"
         android:textSize="11sp"
         android:maxWidth="50dp"
         app:layout_constraintStart_toStartOf="@id/tv_number_1"
@@ -42,11 +56,23 @@
         app:layout_constraintStart_toEndOf="@id/tv_number_1"
         app:layout_constraintTop_toTopOf="@id/tv_number_1" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number_2"
+        app:layout_constraintEnd_toStartOf="@id/tv_number_3"
+        app:layout_constraintTop_toTopOf="@id/tv_number_2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_number_2" />
+
     <TextView
         android:id="@+id/tv_text_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxWidth="50dp"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textSize="11sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@id/tv_number_2"
@@ -66,12 +92,24 @@
         app:layout_constraintStart_toEndOf="@id/tv_number_2"
         app:layout_constraintTop_toTopOf="@id/tv_number_2" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number_3"
+        app:layout_constraintEnd_toStartOf="@id/tv_number_4"
+        app:layout_constraintTop_toTopOf="@id/tv_number_3"
+        app:layout_constraintBottom_toBottomOf="@id/tv_number_3" />
+
     <TextView
         android:id="@+id/tv_text_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxWidth="50dp"
         android:textSize="11sp"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@id/tv_number_3"
         app:layout_constraintStart_toStartOf="@id/tv_number_3"
@@ -90,12 +128,24 @@
         app:layout_constraintStart_toEndOf="@id/tv_number_3"
         app:layout_constraintTop_toTopOf="@id/tv_number_3" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number_4"
+        app:layout_constraintEnd_toStartOf="@id/tv_number_5"
+        app:layout_constraintTop_toTopOf="@id/tv_number_4"
+        app:layout_constraintBottom_toBottomOf="@id/tv_number_4" />
+
     <TextView
         android:id="@+id/tv_text_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxWidth="50dp"
         android:textAlignment="center"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="@id/tv_number_4"
         app:layout_constraintStart_toStartOf="@id/tv_number_4"
@@ -114,12 +164,24 @@
         app:layout_constraintStart_toEndOf="@id/tv_number_4"
         app:layout_constraintTop_toTopOf="@id/tv_number_4" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number_5"
+        app:layout_constraintEnd_toStartOf="@id/tv_number_6"
+        app:layout_constraintTop_toTopOf="@id/tv_number_5"
+        app:layout_constraintBottom_toBottomOf="@id/tv_number_5" />
+
     <TextView
         android:id="@+id/tv_text_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxWidth="50dp"
         android:textAlignment="center"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="@id/tv_number_5"
         app:layout_constraintStart_toStartOf="@id/tv_number_5"
