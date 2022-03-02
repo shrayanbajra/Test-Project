@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestProject">
         <activity
+            android:name=".ui.equal_spacing_responsive_design.EqualSpacingResponsiveDesignActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.sandwich.SandwichActivity"
             android:exported="false" />
         <activity

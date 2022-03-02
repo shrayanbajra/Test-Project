@@ -6,6 +6,7 @@ enum class Feature(val title: String) {
     MULTIPLE_EXPANSIBLE_CARD(title = "Multiple Expansible Card"),
     PAGINATION(title = "Pagination"),
     IMAGE_CHOOSER(title = "Image Chooser"),
-    SANDWICH(title = "Sandwich")
+    SANDWICH(title = "Sandwich"),
+    EQUAL_SPACING_RESPONSIVE_DESIGN(title = "Equal Spacing Response Design")
 
 }

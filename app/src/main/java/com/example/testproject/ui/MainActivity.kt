@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.ActivityMainBinding
 import com.example.testproject.exhaustive
+import com.example.testproject.ui.equal_spacing_responsive_design.EqualSpacingResponsiveDesignActivity
 import com.example.testproject.ui.pagination.PaginationActivity
 import com.example.testproject.ui.sandwich.SandwichActivity
 import com.example.testproject.utils.SingleParamItemClickListener
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
                     Feature.IMAGE_CHOOSER -> openImageChooserActivity()
 
                     Feature.SANDWICH -> openSandwichActivity()
+
+                    Feature.EQUAL_SPACING_RESPONSIVE_DESIGN -> openEqualSpacingResponsiveDesignActivity()
 
                 }.exhaustive
 
@@ -83,6 +86,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openSandwichActivity() {
         val intent = SandwichActivity.newIntent(packageContext = this)
+        startActivity(intent)
+    }
+
+    private fun openEqualSpacingResponsiveDesignActivity() {
+        val intent = EqualSpacingResponsiveDesignActivity.newIntent(packageContext = this)
         startActivity(intent)
     }
 
