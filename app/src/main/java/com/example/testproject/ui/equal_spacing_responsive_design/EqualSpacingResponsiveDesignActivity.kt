@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.testproject.databinding.ActivityEqualSpacingResponsiveDesignBinding
+import com.example.testproject.databinding.ActivityEqualSpacingResponsiveDesign2Binding
 
 class EqualSpacingResponsiveDesignActivity : AppCompatActivity() {
 
-    private var binding: ActivityEqualSpacingResponsiveDesignBinding? = null
+    private var binding: ActivityEqualSpacingResponsiveDesign2Binding? = null
     private val mBinding get() = binding!!
 
     companion object {
@@ -23,17 +23,17 @@ class EqualSpacingResponsiveDesignActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEqualSpacingResponsiveDesignBinding.inflate(layoutInflater)
+        binding = ActivityEqualSpacingResponsiveDesign2Binding.inflate(layoutInflater)
         val view = binding!!.root
         setContentView(view)
 
-        mBinding.apply {
-            tvText1.text = "Brancher"
-            tvText2.text = "Piece"
-            tvText3.text = "Scanner"
-            tvText4.text = "Wi-Fi"
-            tvText5.text = "Synchronizer"
-        }
+//        mBinding.apply {
+//            tvText1.text = "Brancher"
+//            tvText2.text = "Piece"
+//            tvText3.text = "Scanner"
+//            tvText4.text = "Wi-Fi"
+//            tvText5.text = "Synchronizer"
+//        }
 
     }
 
