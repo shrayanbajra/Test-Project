@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Test Project"
 include ':app'
+include ':bajra-library'

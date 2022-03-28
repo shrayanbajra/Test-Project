@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testproject.databinding.ActivityMainBinding
 import com.example.testproject.exhaustive
-import com.example.testproject.ui.equal_spacing_responsive_design.EqualSpacingResponsiveDesignActivity
 import com.example.testproject.ui.pagination.PaginationActivity
 import com.example.testproject.ui.sandwich.SandwichActivity
 import com.example.testproject.utils.SingleParamItemClickListener
@@ -90,7 +89,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openEqualSpacingResponsiveDesignActivity() {
-        val intent = EqualSpacingResponsiveDesignActivity.newIntent(packageContext = this)
+//        val intent = EqualSpacingResponsiveDesignActivity.newIntent(packageContext = this)
+//        startActivity(intent)
+
+        val intent =
+            ExpansibleCardsActivity.newIntent(packageContext = this, ExpansibleCardsActivity.SINGLE)
         startActivity(intent)
     }
 

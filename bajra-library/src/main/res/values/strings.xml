@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Test Project</string>
+
+    <string name="search">Search</string>
+    <string name="title_goes_here">Title goes here</string>
+    <string name="subtitle_goes_here">Subtitle goes here</string>
+    <string name="expansible_arrow_indicator">Expansible arrow indicator</string>
+    <string name="body_1">Body 1</string>
+    <string name="body_2">Body 2</string>
+    <string name="lorem_ipsum_45_words">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et fermentum dolor. Aenean magna magna, pulvinar sit amet tincidunt quis, bibendum nec nisi. Nunc vitae finibus odio. Duis erat justo, pretium nec tincidunt id, facilisis in justo. Etiam feugiat, sapien quis mollis sollicitudin, urna nibh.</string>
+    <string name="single_expansible_card">Single Expansible Card</string>
+    <string name="multiple_expansible_cards">Multiple Expansible Cards</string>
+    <string name="permission_x">Permission X</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="keep_requesting_permissions">Keep requesting permissions</string>
+    <string name="pagination">Pagination</string>
+    <string name="retry">Retry</string>
+
+</resources>
