@@ -32,7 +32,7 @@
             android:name=".ui.ExpansibleCardsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.pagination.PaginationActivity"
+            android:name="com.example.bajralibrary.ui.pagination.PaginationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

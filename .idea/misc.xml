@@ -16,13 +16,19 @@
         <entry key="app/src/main/res/layout/fragment_expandable_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_expansible_card.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_multiple_expansible_cards.xml" value="0.10233029381965553" />
+        <entry key="app/src/main/res/layout/fragment_pagination.xml" value="0.18778110944527737" />
         <entry key="app/src/main/res/layout/fragment_recycler_view_with_expandable_cards.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/layout/fragment_single_expansible_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_expansible_card.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_pagination.xml" value="0.18778110944527737" />
+        <entry key="app/src/main/res/layout/layout_loading_state.xml" value="0.18778110944527737" />
         <entry key="app/src/main/res/layout/menu_main.xml" value="0.10233029381965553" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.20717948717948717" />
         <entry key="app/src/main/res/menu/menu_my_tasks.xml" value="0.20717948717948717" />
         <entry key="bajra-library/src/main/res/drawable/ic_keyboard_arrow_down.xml" value="0.1395" />
+        <entry key="bajra-library/src/main/res/layout/fragment_pagination.xml" value="0.18778110944527737" />
+        <entry key="bajra-library/src/main/res/layout/item_pagination.xml" value="0.18778110944527737" />
+        <entry key="bajra-library/src/main/res/layout/layout_loading_state.xml" value="0.18778110944527737" />
       </map>
     </option>
   </component>

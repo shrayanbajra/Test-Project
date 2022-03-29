@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.bajralibrary.ui.pagination.PaginationActivity
 import com.example.testproject.databinding.ActivityMainBinding
 import com.example.testproject.exhaustive
-import com.example.testproject.ui.pagination.PaginationActivity
 import com.example.testproject.ui.sandwich.SandwichActivity
 import com.example.testproject.utils.SingleParamItemClickListener
 
@@ -92,8 +92,7 @@ class MainActivity : AppCompatActivity() {
 //        val intent = EqualSpacingResponsiveDesignActivity.newIntent(packageContext = this)
 //        startActivity(intent)
 
-        val intent =
-            ExpansibleCardsActivity.newIntent(packageContext = this, ExpansibleCardsActivity.SINGLE)
+        val intent = PaginationActivity.newIntent(packageContext = this)
         startActivity(intent)
     }
 
