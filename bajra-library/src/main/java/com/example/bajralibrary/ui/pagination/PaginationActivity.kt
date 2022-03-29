@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bajralibrary.databinding.FragmentPagination1Binding
 import com.example.bajralibrary.extensions.showShortToast
-import com.example.testproject.network.NetworkResult
+import com.example.bajralibrary.network.NetworkResult
 import kotlinx.coroutines.flow.collectLatest
 
 class PaginationActivity : AppCompatActivity() {

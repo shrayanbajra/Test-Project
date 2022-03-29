@@ -7,10 +7,10 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
+import com.example.bajralibrary.network.NetworkResult
 import com.example.bajralibrary.network.PicSumClient
 import com.example.bajralibrary.ui.pagination.data_source.ItemsDataSource
 import com.example.bajralibrary.ui.pagination.dto.PicSumDto
-import com.example.testproject.network.NetworkResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 

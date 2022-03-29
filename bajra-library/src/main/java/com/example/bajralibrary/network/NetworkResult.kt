@@ -1,4 +1,4 @@
-package com.example.testproject.network
+package com.example.bajralibrary.network
 
 sealed class NetworkResult<T>(
     val data: T? = null,

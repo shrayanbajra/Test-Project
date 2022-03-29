@@ -2,10 +2,10 @@ package com.example.bajralibrary.ui.pagination
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.example.bajralibrary.network.NetworkResult
 import com.example.bajralibrary.network.PicSumApiService
 import com.example.bajralibrary.ui.pagination.dto.PicSumDto
 import com.example.bajralibrary.utils.NetworkUtils
-import com.example.testproject.network.NetworkResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

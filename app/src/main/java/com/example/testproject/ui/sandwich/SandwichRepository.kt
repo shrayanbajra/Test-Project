@@ -1,7 +1,7 @@
 package com.example.testproject.ui.sandwich
 
-import com.example.bajralibrary.network.PicSumApiService
-import com.example.bajralibrary.ui.pagination.dto.PicSumDto
+import com.example.testproject.network.PicSumApiService
+import com.example.testproject.ui.pagination.dto.PicSumDto
 import com.skydoves.sandwich.ApiResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
